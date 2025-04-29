@@ -1,0 +1,17 @@
+version: '3'
+services:
+  teleport:
+    image: orangehrm_teleport:version1
+    build: ./Docker_Image
+    container_name: teleport_orangehrm
+    entrypoint: /bin/sh
+    hostname: OHRM-TO-DEEGHAYU
+    command: -c "sleep 1 && teleport start -c /etc/teleport/teleport.yaml"
+    ports:
+      - "3023:3023"
+      - "3024:3024"
+      - "3025:3025"
+      - "3080:3080"
+    volumes:
+      - ./config:/etc/teleport
+      - ./data:/var/lib/teleport
