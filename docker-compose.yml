@@ -1,9 +1,9 @@
 version: '3'
 services:
   teleport:
-    image: orangehrm_teleport:version1
+    image: <Image_Name>
     build: ./Docker_Image
-    container_name: teleport_orangehrm
+    container_name: <Container_Name>
     entrypoint: /bin/sh
     hostname: OHRM-TO-DEEGHAYU
     command: -c "sleep 1 && teleport start -c /etc/teleport/teleport.yaml"
