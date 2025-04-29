@@ -7,7 +7,7 @@
 #
 version: v2
 teleport:
-  nodename: OHRM-TO-DEEGHAYU
+  nodename: <nodename>
   data_dir: /var/lib/teleport
   log:
     output: stderr
